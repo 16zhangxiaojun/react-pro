@@ -33,3 +33,8 @@ export const Login = Loadable({
     loader:_=>import("./login"),
     loading:Loading
 })
+
+export const Register = Loadable({
+    loader:_=>import("./register"),
+    loading:Loading
+})

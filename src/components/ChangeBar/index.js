@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
-import {TabBarContainer} from "./styled"
-import {TabBarRoute} from "../../router"
+import {NoTabBarRoute} from "../../router"
+import { ChangContainer } from "./styled";
 import {withRouter} from "react-router-dom";
+console.log(NoTabBarRoute)
 @withRouter
-class TabBar extends Component {
+class ChangeBar extends Component {
     render() {
-        let {path} = this.props;
-        console.log(path)
+        let {path} = this.props
+        console.log(this.props)
+
         return (
-            <TabBarContainer>
+            <ChangContainer>
                     <ul>
                        {
-                           TabBarRoute.map((item)=>(
+                           NoTabBarRoute.map((item)=>(
                                <li key={item.path} onClick={this.handleTo.bind(this,item.path)} className={path===item.path?'active':""}>
                                     <i className="iconfont">{item.icon}</i>
                                     <span>{item.text}</span>
@@ -19,13 +21,14 @@ class TabBar extends Component {
                            ))
                        }
                     </ul>
-            </TabBarContainer>
+            </ChangContainer>
         )
     }
+    
     handleTo(path){
         this.props.history.push(path);
+        console.log(path)
     }
 }
 
-export default TabBar;
-
+export default ChangeBar
