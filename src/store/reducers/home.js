@@ -1,14 +1,15 @@
 import {handleActions} from "redux-actions";
-import {homeAsyncType} from "../../action/home/actionTypes"
+import {cityListType} from "../../action/actionsTypes"
 
 const defaultState = {
-    home_choice:[]
+    city_list:[]
 }
 
 export default handleActions({
-    [homeAsyncType]:(state,action)=>{
+    [cityListType]:(state,action)=>{
         let homeState = JSON.parse(JSON.stringify(state));
-        homeState.home_choice = action.payload.data;
+        homeState.city_list = action.payload.data;
+        // console.log(action)
         return homeState
     }
 

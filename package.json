@@ -7,7 +7,6 @@
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
-    "antd-mobile": "^2.3.1",
     "babel-eslint": "10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "8.0.6",
@@ -96,6 +95,7 @@
     "@babel/helper-create-regexp-features-plugin": "^7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
     "@babel/plugin-syntax-jsx": "^7.7.4",
+    "antd-mobile": "^2.3.1",
     "babel-plugin-import": "^1.13.0",
     "customize-cra": "^0.9.1",
     "http-proxy-middleware": "^0.20.0",
@@ -162,5 +162,7 @@
         }
       ]
     ]
-  }
+  },
+  "main": "index.js",
+  "license": "MIT"
 }

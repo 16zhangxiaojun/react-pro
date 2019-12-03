@@ -1,6 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import { MineContainer, Headimage, Minecontent } from "./styled"
-export default class Mine extends Component {
+// import {Route,HashRouter,NavLink,Link} from "react-router-dom"//路由跳转
+// import {routeEach} from "../../utils/routeEach";
+// import {MineRoute} from "../../router/minerouter"
+import {withRouter} from "react-router-dom"
+@withRouter
+class Mine extends Component {
     constructor() {
         super()
         this.state = {
@@ -61,8 +66,8 @@ export default class Mine extends Component {
                     </div>
 
                 </MineContainer>
-                <Headimage>
-                    <div className="imgbox">
+                <Headimage onClick={this.handlePerson.bind(this)}>
+                    <div  className="imgbox" >
                         <div><i className="iconfont icon-wode"></i></div>
                         <div>
                             <p>独立日</p>
@@ -70,6 +75,7 @@ export default class Mine extends Component {
                         </div>
                     </div>
                     <span className="r">&gt;</span>
+                  
                 </Headimage>
                 <Minecontent>
                     <ul>
@@ -85,7 +91,13 @@ export default class Mine extends Component {
 
         )
     }
+    handlePerson(){
+        this.props.history.push("/Personinfo")
+        console.log("Personinfo")
+    }
     handleSwitchFunction(){
         console.log("Toggle");
     }
 }
+
+export default Mine;

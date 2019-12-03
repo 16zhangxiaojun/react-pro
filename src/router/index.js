@@ -4,10 +4,11 @@ import {
     Order,
     Mine,
     Login,
-    Register
+    Register,
+    
 } from "pages"
-
-
+import Personinfo from "../pages/personinfo/index"
+import EducaTion from "../pages/personinfo/education"
 export const TabBarRoute = [
     {
         path:"/home",
@@ -45,7 +46,9 @@ export const TabBarRoute = [
         },
         icon:"\ue617",
         text:"我的"
-    }
+    },
+    
+
 ];
 
 export const NoTabBarRoute = [
@@ -61,7 +64,22 @@ export const NoTabBarRoute = [
         component:Register,
         meta:{},
         text:"注册"
+    },
+    {
+        path:"/personinfo",
+        component:Personinfo,
+        meta:{
+    
+        }
+    },
+    {
+        path:"/education",
+        component:EducaTion,
+        meta:{
+    
+        }
     }
+
 ];
 
 export const RouteConfig = TabBarRoute.concat(NoTabBarRoute)
